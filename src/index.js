@@ -1,6 +1,6 @@
-import * as P5 from 'p5';
-import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
+import JSZip from 'jszip';
+import * as P5 from 'p5';
 
 const cols = 9;
 const rows = cols;
@@ -85,7 +85,7 @@ const index = (p) => {
       for (let y = 0; y < rows; y++) {
         p.square(x * blockSize, y * blockSize, blockSize);
         const number = randomSudokuNumber();
-        const keepEmpty = randomSudokuNumber() < 8;
+        const keepEmpty = randomSudokuNumber() < 6;
         if (keepEmpty) {
           drawNumber(x, y, number);
         }
